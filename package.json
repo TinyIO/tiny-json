@@ -1,0 +1,44 @@
+{
+  "name": "@tiny.io/tiny.json",
+  "version": "0.0.1",
+  "description": "tiny.json is a supper fast json stringfiy with schema.",
+  "keywords": [],
+  "main": "lib/index.js",
+  "files": [
+    "lib/*.js"
+  ],
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "lint": "eslint ./lib/*.js ./benchmark/*.js ./tests/*.js ./examples/*.js --fix",
+    "test": "mocha --timeout=15000 tests/*.test.js",
+    "bench": "node ./benchmark/simple.js",
+    "cover": "nyc --reporter=lcovonly --reporter=text --reporter=text-summary mocha --timeout=15000 --reporter spec tests/*.test.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tiny.IO/tiny-json.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.3",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "mocha": "^6.1.4",
+    "mocha-testdata": "^1.2.0",
+    "nyc": "^14.1.1",
+    "prettier": "^1.17.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 100
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
