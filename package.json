@@ -1,6 +1,6 @@
 {
   "name": "@tiny.io/tiny.json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "tiny.json is a supper fast json stringfiy with schema.",
   "keywords": [],
   "main": "lib/index.js",

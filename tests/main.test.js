@@ -212,7 +212,6 @@ describe('tiny.json tests', () => {
     const stringify = createStringify({
       type: 'object',
       properties: {
-        hello: { type: 'string' },
         a: {
           type: 'array',
           items: {
@@ -229,12 +228,12 @@ describe('tiny.json tests', () => {
               }
             }
           }
-        }
+        },
+        hello: { type: 'string' }
       }
     });
 
     const test = {
-      hello: 'world',
       a: [
         {
           b: 'test',
@@ -266,7 +265,8 @@ describe('tiny.json tests', () => {
             d: 1.323289
           }
         }
-      ]
+      ],
+      hello: 'world'
     };
     const native = JSON.stringify(test);
     const tiny = stringify(test);
